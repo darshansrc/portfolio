@@ -78,6 +78,19 @@ export const DATA = {
 blog and pricing page for outpost.run using Next.js and TypeScript. Currently, I am working on the development of outpost's control plane. My
 tech stack includes Next.js, TypeScript, Node.js, FastAPI, Go, Docker, and Kubernetes for building scalable solutions.`,
     },
+    {
+      company: "Fiverr",
+      href: "#",
+      badges: [],
+      location: "Remote",
+      title: "Freelance Content and UI/UX Designer",
+      logoUrl: "/fiverr.png",
+      start: "July 2022",
+      end: "March 2023",
+      description: `Worked as a Content and UI/UX Designer for over 20+ international clients and completed over 50+ orders. Skills used
+include Figma, Adobe Premiere Pro & After Effects.
+Top clients: codedex.io, launchagency.co.nz`,
+    },
   ],
   education: [
     {

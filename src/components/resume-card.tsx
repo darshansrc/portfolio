@@ -46,18 +46,18 @@ export const ResumeCard = ({
     >
       <Card className="flex">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto ">
+          <Avatar className="border size-12 m-auto bg-black">
             <AvatarImage
               src={logoUrl}
               alt={altText}
-              className={cn(altText === "Outpost" && "p-1.5  dark:invert  ")}
+              className={cn(altText === "Outpost" && "p-1.5  invert")}
             />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
         <div className="flex-grow ml-4 items-center flex-col group">
           <CardHeader>
-            <div className="flex items-center justify-between gap-x-2 text-base">
+            <div className="flex items-start justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 {title}
                 {badges && (

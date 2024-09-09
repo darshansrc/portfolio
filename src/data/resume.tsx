@@ -7,10 +7,10 @@ export const DATA = {
   url: "https://darshansrc.vercel.app",
   location: "Bangalore, IN",
   locationLink: "https://www.google.com/maps/place/bengaluru",
-  description: `A Full Stack Developer based in Bangalore.`,
+  description: `A T3 Stack Developer based in Bangalore.`,
   summary:
     "An experienced Full stack developer and GenAI enthusiast, building innovative tools and solutions",
-  avatarUrl: "/darshan.jpg",
+  avatarUrl: "/me.png",
   skills: [
     "React",
     "Next.js",

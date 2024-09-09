@@ -29,7 +29,7 @@ export const ResumeCard = ({
   period,
   description,
 }: ResumeCardProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = React.useState(true);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (description) {
@@ -50,7 +50,7 @@ export const ResumeCard = ({
             <AvatarImage
               src={logoUrl}
               alt={altText}
-              className={cn(altText === "Outpost" && "p-1.5  invert ")}
+              className={cn(altText === "Outpost" && "p-1.5  dark:invert  ")}
             />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
@@ -80,7 +80,7 @@ export const ResumeCard = ({
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+              <div className="text-xs sm:text-sm shrink-0 tabular-nums text-muted-foreground text-right">
                 {period}
               </div>
             </div>

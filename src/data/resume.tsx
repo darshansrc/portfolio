@@ -30,6 +30,7 @@ export const DATA = {
   contact: {
     email: "darshansr1618@gmail.com",
     tel: "+918088597575",
+    whatsapp: "https://wa.me/918088597575",
     social: {
       GitHub: {
         name: "GitHub",

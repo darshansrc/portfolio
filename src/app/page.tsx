@@ -5,7 +5,9 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
+import { Download } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -25,10 +27,19 @@ export default function Page() {
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="max-w-[600px] text-sm md:text-lg"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <Link href={"/resume.pdf"}>
+                  <Button size={"sm"} variant={"secondary"}>
+                    <Download className="mr-2 size-4" />
+                    Resume
+                  </Button>
+                </Link>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border  object-top ">
@@ -167,12 +178,12 @@ export default function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href={DATA.contact.whatsapp}
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  on whatsapp
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
+                and I&apos;ll respond as soon as possible. I will ignore all
                 soliciting.
               </p>
             </div>

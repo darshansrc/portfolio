@@ -70,13 +70,13 @@ export const DATA = {
       href: "https://outpost.run/",
       badges: [],
       location: "Bangalore, IN",
-      title: "SDE Intern",
+      title: "Software Developer Intern",
       logoUrl: "/outpost.svg",
-      start: "June 2024",
-      end: "Current",
-      description: `As a Full-Stack Developer at an AI Infra as a Service startup, I developed the landing, documentation,
+      start: "Jun 2024",
+      end: "Sep 2024",
+      description: `As a developer at an AI Infra as a Service startup, I developed the landing, documentation,
 blog and pricing page for outpost.run using Next.js and TypeScript. Currently, I am working on the development of outpost's control plane. My
-tech stack includes Next.js, TypeScript, Node.js, FastAPI, Go, Docker, and Kubernetes for building scalable solutions.`,
+tech stack includes Next.js, TypeScript, Tailwind, Node.js, Fastify, Go, Docker, and Kubernetes for building scalable solutions.`,
     },
     {
       company: "Fiverr",
@@ -106,7 +106,7 @@ Top clients: codedex.io, launchagency.co.nz`,
     {
       title: "EZ Diagram",
       href: "https://ezdiagram.com",
-      dates: "Jan 2024 - Feb 2024",
+      dates: "Mar 2024 - Jun 2024",
       active: true,
       description: `Built a SaaS platform, EZ Diagram, to simplify diagramming and documentation. Using AI, it generates PlantUML and
 Mermaid.js architecture diagrams through prompts. With over 10,000+ visitors, the platform has created over 1,000

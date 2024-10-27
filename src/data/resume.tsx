@@ -76,7 +76,7 @@ export const DATA = {
       end: "Current",
       description: `As a developer at an AI Infra as a Service startup, I developed the landing, documentation,
 blog and pricing page for outpost.run using Next.js and TypeScript. Currently, I am working on the development of outpost's control plane. My
-tech stack includes Next.js, TypeScript, Tailwind, Node.js, Fastify, Go, Docker, and Kubernetes for building scalable solutions.`,
+tech stack includes Next.js, TypeScript, Tailwind, Node.js, Fastify and Docker for building scalable solutions.`,
     },
     {
       company: "Fiverr",

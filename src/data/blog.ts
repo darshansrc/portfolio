@@ -7,13 +7,6 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 
-type Metadata = {
-  title: string;
-  publishedAt: string;
-  summary: string;
-  image?: string;
-};
-
 function getMDXFiles(dir: string) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
 }
@@ -51,7 +44,7 @@ export async function getPost(slug: string) {
 async function getAllPosts(dir: string) {
   let mdxFiles = getMDXFiles(dir);
   return Promise.all(
-    mdxFiles.map(async (file) => {
+    mdxFiles.map(async (file: any) => {
       let slug = path.basename(file, path.extname(file));
       let { metadata, source } = await getPost(slug);
       return {

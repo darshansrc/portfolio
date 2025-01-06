@@ -69,7 +69,7 @@ export const DATA = {
       company: "Outpost",
       href: "https://outpost.run/",
       badges: [],
-      location: "Bangalore, IN",
+      location: "Bangalore, India",
       title: "Software Developer Intern",
       logoUrl: "/outpost.svg",
       start: "Jun 2024",

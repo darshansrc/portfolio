@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import Markdown from "react-markdown";
 
 interface ResumeCardProps {
   logoUrl: string;
@@ -18,6 +19,7 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
+  type?: "work" | "education";
 }
 export const ResumeCard = ({
   logoUrl,
@@ -28,30 +30,19 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  type,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(true);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (description) {
-      e.preventDefault();
-      setIsExpanded(!isExpanded);
-    }
-  };
-
   return (
-    <Link
-      href={href || "#"}
-      className="block cursor-pointer"
-      onClick={handleClick}
-    >
-      <Card className="flex">
+    <div className="relative">
+      <div className="absolute  left-6  z-[10] h-full">
+        {type === "work" && <div className="border h-full" />}
+      </div>
+      <Card className="flex pb-3">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-black">
-            <AvatarImage
-              src={logoUrl}
-              alt={altText}
-              className={cn(altText === "Outpost" && "p-1.5  invert")}
-            />
+          <Avatar className="border size-12 m-auto z-[50] bg-black rounded-lg">
+            <AvatarImage src={logoUrl} alt={altText} className={cn(`z-[50]`)} />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
@@ -59,7 +50,12 @@ export const ResumeCard = ({
           <CardHeader>
             <div className="flex items-start justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
-                {title}
+                <Link
+                  href={href || "#"}
+                  className="hover:underline underline-offset-2 hover:text-blue-600"
+                >
+                  {title}
+                </Link>
                 {badges && (
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (
@@ -73,12 +69,6 @@ export const ResumeCard = ({
                     ))}
                   </span>
                 )}
-                <ChevronRightIcon
-                  className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                    isExpanded ? "rotate-90" : "rotate-0"
-                  )}
-                />
               </h3>
               <div className="text-xs sm:text-sm shrink-0 tabular-nums text-muted-foreground text-right">
                 {period}
@@ -100,11 +90,11 @@ export const ResumeCard = ({
               }}
               className="mt-2 text-xs sm:text-sm"
             >
-              {description}
+              <div dangerouslySetInnerHTML={{ __html: description }}></div>
             </motion.div>
           )}
         </div>
       </Card>
-    </Link>
+    </div>
   );
 };

@@ -4,7 +4,9 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/resume";
+import { Download, ExternalLink, Link2 } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -15,11 +17,11 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
+          <div className="gap-2 flex justify-between items-center">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
+                className="text-2xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none"
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
@@ -29,17 +31,17 @@ export default function Page() {
                 text={DATA.description}
               />
 
-              {/* <BlurFade delay={BLUR_FADE_DELAY}>
-                <Link href={"/resume.pdf"}>
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <Link target="_blank" href={"/resume.pdf"}>
                   <Button size={"sm"} variant={"secondary"}>
-                    <Download className="mr-2 size-4" />
+                    <ExternalLink className="mr-2 size-4" />
                     Resume
                   </Button>
                 </Link>
-              </BlurFade> */}
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border   ">
+              <Avatar className="size-28 md:size-32 border   ">
                 <AvatarImage
                   className="object-contain p-3 bg-neutral-800 "
                   alt={DATA.name}
@@ -63,7 +65,9 @@ export default function Page() {
       </section>
       <section id="work">
         <div className="flex min-h-0 flex-col  relative">
-          <h2 className="text-xl font-bold mb-3">Work Experience</h2>
+          <BlurFade delay={BLUR_FADE_DELAY * 3}>
+            <h2 className="text-xl font-bold mb-3">Work Experience</h2>
+          </BlurFade>
 
           {DATA.work.map((work, id) => (
             <BlurFade

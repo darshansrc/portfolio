@@ -32,7 +32,7 @@ export default function Page() {
               />
 
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <Link target="_blank" href={"/resume.pdf"}>
+                <Link target="_blank" href={"/resume"}>
                   <Button size={"sm"} variant={"secondary"}>
                     <ExternalLink className="mr-2 size-4" />
                     Resume

@@ -7,22 +7,30 @@ export const DATA = {
   url: "https://darshansrc.com",
   location: "Bangalore, IN",
   locationLink: "https://www.google.com/maps/place/bengaluru",
-  description: ` A Software Developer based in Bangalore.`,
+  description: `Full-stack TypeScript engineer with 2+ years of experience building SaaS platforms, modern web applications, and scalable backends.`,
   summary:
-    "An experienced full-stack developer specializing in TypeScript and a GenAI enthusiast building innovative tools and solutions",
+    "Full-stack TypeScript engineer with 2+ years of experience building SaaS platforms, modern web applications, and scalable backends. Skilled in React, Next.js, TypeScript, TailwindCSS, Fastify, PostgreSQL and cloud native tools.",
   avatarUrl: "/me.png",
   skills: [
+    "TypeScript",
     "React",
     "Next.js",
-    "Typescript",
-    "Postgres",
-    "Prisma",
-    "Fastify",
     "Node.js",
+    "Fastify",
+    "PostgreSQL",
+    "Prisma",
+    "TailwindCSS",
+    "Python",
     "Go",
     "Cloudflare",
     "AWS",
     "Docker",
+    "Redis",
+    "Neo4j",
+    "Vercel AI SDK",
+    "LangChain",
+    "Stripe",
+    "OpenAI",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -35,26 +43,22 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://git.new/darshan-github",
+        url: "https://github.com/darshansrc",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/darshan-linkedin",
+        url: "https://linkedin.com/in/darshansrc",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://dub.sh/darshan-x",
+        url: "https://x.com/darshansrc",
         icon: Icons.x,
-
         navbar: true,
       },
-
       email: {
         name: "Send Email",
         url: "mailto:darshansr1618@gmail.com",
@@ -66,28 +70,26 @@ export const DATA = {
 
   work: [
     {
-      company: "Asymmetri",
+      company: "Asymmetri Innovations",
       href: "https://asymmetri.in/",
-      location: "Bangalore, India",
+      location: "Bengaluru, India",
       title: "SDE-1",
       logoUrl: "/asymmetri.png",
       badges: [],
       start: "Jan 2025",
-      end: "Current",
-      description: `• Developed the complete backend and admin panel for Zimkey (a platform similar to Urban Company) using TypeScript, Prisma, Fastify, Next.js, and Razorpay. <br /> • Worked on homepage optimizations and modifications for Tradejini based on client requirements, improving performance and user experience.`,
+      end: "Present",
+      description: `• Komerz (AI-based business analysis SaaS): Built AI-powered reporting and analytics tool that generates dynamic PPTs, visual dashboards, and market analysis reports. Leveraged Next.js, TypeScript, Neo4j, Vercel AI SDK, Stripe, RAG pipelines, and agentic AI workflows to deliver actionable insights for B2B clients. <br /> • Zimkey: Developed the backend for a service marketplace platform, delivering a robust backend and admin panel with Fastify, TypeScript, Prisma, and Next.js. Implemented secure payments with Razorpay and optimized the system for scalability and reliability to support high-volume real-world usage. <br /> • Tradejini (Fintech platform): Enhanced platform performance and user experience by implementing full-stack improvements. Developed frontend with Next.js, TypeScript, and TailwindCSS, and optimized backend workflows.`,
     },
     {
-      company: "Outpost ",
+      company: "Outpost Innovations Inc.",
       href: "https://outpost.run/",
       badges: [],
-      location: "Bangalore, India",
+      location: "Bengaluru, India",
       title: "SDE Intern",
       logoUrl: "/outpost.png",
       start: "Jun 2024",
       end: "Jan 2025",
-      description: `As a developer at an AI Infra as a Service startup, I developed the landing, documentation,
-blog and pricing page for outpost.run using Next.js and TypeScript. Currently, I am working on the development of outpost's control plane. My
-tech stack includes Next.js, TypeScript, Tailwind, Node.js, and Fastify for building scalable solutions.`,
+      description: `• Developed frontend and backend features using Next.js, TypeScript, TailwindCSS, Fastify, NextAuth, Prisma, and Drizzle, ensuring secure authentication, responsive UI, and efficient data handling. <br /> • Implemented billing logic for GPU usage on outpost.run and designed monitoring and analytics pipelines with Prometheus, BullMQ, and Grafana to track workloads and schedule jobs. <br /> • Integrated a Git server with Gitea including proxy authentication, and developed a full Git UI for internal operations and workflow management.`,
     },
     {
       company: "Fiverr",
@@ -98,16 +100,14 @@ tech stack includes Next.js, TypeScript, Tailwind, Node.js, and Fastify for buil
       logoUrl: "/fiverr.png",
       start: "July 2022",
       end: "Dec 2023",
-      description: `Worked as a Content and Video Editor for over 20+ international clients and completed over 50+ orders. Tools used
-include Adobe Premiere Pro & After Effects.
-Top clients: codedex.io, launchagency.co.nz`,
+      description: `Worked as a Content and Video Editor for over 20+ international clients and completed over 50+ orders. Tools used include Adobe Premiere Pro & After Effects. Top clients: codedx.io, launchagency.co.nz`,
     },
   ],
   education: [
     {
-      school: "RV Institute of Technology & Management",
+      school: "RV Institute of Technology and Management",
       href: "#",
-      degree: "Bachelor in Information Science & Engineering",
+      degree: "Bachelor of Engineering in Information Science & Engineering",
       logoUrl: "/rvitm.png",
       start: "2021",
       end: "2025",
@@ -115,13 +115,41 @@ Top clients: codedex.io, launchagency.co.nz`,
   ],
   projects: [
     {
+      title: "Elkagent.com",
+      href: "https://elkagent.com",
+      dates: "2024 - Present",
+      active: true,
+      description: `Developed a full-featured AI customer support SaaS with chat, ticketing, and knowledge base capabilities, designed for seamless integration across websites. Designed scalable back-end and front-end using Next.js, TypeScript, LangChain, Vercel AI SDK, Cloudflare Workers, Redis, and AWS RDS with PgVector for embeddings. Integrated payment processing with Stripe and supported multiple AI models including OpenAI, Anthropic, Google Gemini, Grok, LLaMA, and DeepSeek for flexible and high-quality responses.`,
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "LangChain",
+        "Vercel AI SDK",
+        "Cloudflare Workers",
+        "Redis",
+        "AWS RDS",
+        "PgVector",
+        "Stripe",
+        "OpenAI",
+        "Anthropic",
+        "Google Gemini",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://elkagent.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "https://elkagent.com/opengraph-image.png",
+      video: "",
+    },
+    {
       title: "EZ Diagram",
-      href: "https://ezdiagram.com",
+      href: "https://ezdiagram.vercel.app",
       dates: "Mar 2024 - Jun 2024",
       active: true,
-      description: `Built a SaaS platform, EZ Diagram, to simplify diagramming and documentation. Using AI, it generates PlantUML and
-Mermaid.js architecture diagrams through prompts. With over 10,000+ visitors, the platform has created over 1,000
-diagrams via AI. The source code is confidential but can be shared upon request.`,
+      description: `Built a SaaS platform, EZ Diagram, to simplify diagramming and documentation. Using AI, it generates PlantUML and Mermaid.js architecture diagrams through prompts. With over 10,000+ visitors, the platform has created over 1,000 diagrams via AI. The source code is confidential but can be shared upon request.`,
       technologies: [
         "Next.js",
         "Typescript",
@@ -138,21 +166,19 @@ diagrams via AI. The source code is confidential but can be shared upon request.
       links: [
         {
           type: "Website",
-          href: "https://ezdiagram.com",
+          href: "https://ezdiagram.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
-      video: "https://www.ezdiagram.com/videos/demo.mp4",
+      video: "https://ezdiagram.vercel.app/videos/demo.mp4",
     },
     {
       title: "Docusage",
       href: "https://docu-sage.vercel.app/",
       dates: "June 2023 - Present",
       active: false,
-      description: `Built a multiple PDF RAG (Retrieval-Augmented Generation) chatbot for the national-level hackathon Fantomcode24,
-where I secured the 2nd runner-up position. The tech stack included TypeScript, Next.js, Tailwind CSS, OpenAI API,
-Langchain, and PineconeDB. Hosted on Vercel`,
+      description: `Built a multiple PDF RAG (Retrieval-Augmented Generation) chatbot for the national-level hackathon Fantomcode24, where I secured the 2nd runner-up position. The tech stack included TypeScript, Next.js, Tailwind CSS, OpenAI API, Langchain, and PineconeDB. Hosted on Vercel`,
       technologies: [
         "Next.js",
         "Typescript",

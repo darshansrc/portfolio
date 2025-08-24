@@ -1,6 +1,7 @@
 import { DATA } from "@/data/resume";
 import { FileIcon } from "lucide-react";
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: `${DATA.name} - Resume`,
@@ -30,6 +31,8 @@ export const metadata: Metadata = {
 };
 
 export default function ResumePage() {
+  redirect("/resume/download");
+
   return (
     <div className="flex max-h-screen  items-center justify-center">
       <div className="text-center my-auto h-full mt-32 md:mt-64 space-y-4">
